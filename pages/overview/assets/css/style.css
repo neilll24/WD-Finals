@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inconsolata", monospace;
+    color: #fff;
+    background-image: url('../img/bg.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.header:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-5px);
+}
+
+.logo img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s;
+    margin-left: 50px;
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-right: 50px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    transition: border 0.3s, color 0.3s, transform 0.3s;
+}
+
+.nav ul li a:hover {
+    border: 1px solid #ffeb3b;
+    color: #ffeb3b;
+    transform: scale(1.1);
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between containers */
+    align-items: center; /* Center content vertically */
+    padding: 20px;
+    max-width: 1200px; /* Example maximum width for centering content */
+    margin: auto; /* Center align content */
+    font-size: larger;
+}
+
+.left-container {
+    flex: 1;
+    padding: 20px; /* Add padding around the container */
+    background-color: rgba(0, 0, 0, 0.3); /* Example background with opacity */
+}
+
+.right-container {
+    flex: 1;
+    margin-left: 40px; /* Adjust spacing between containers */
+    padding: 20px; /* Add padding around the container */
+    background-color: rgba(0, 0, 0, 0.3); /* Example background with opacity */
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-container img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+.icon-container img:hover {
+    filter: brightness(0) invert(1); /* Inverts the color to white */
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+}
+.main-content {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between containers */
+    align-items: center; /* Center content vertically */
+    padding: 20px;
+    max-width: 1200px; /* Example maximum width for centering content */
+    margin: auto; /* Center align content */
+    font-size: larger;
+    animation: fadeIn 0.5s ease forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Initial position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+
+.main-content:hover {
+    transform: scale(1.02); /* Scale up slightly on hover */
+    transition: transform 0.3s ease;
+}
+
+.left-container,
+.right-container {
+    transition: transform 0.3s ease; /* Smooth transition on transform */
+}
+
+.left-container:hover,
+.right-container:hover {
+    transform: translateY(-5px); /* Move containers up slightly on hover */
+}
+
+.footer {
+    background-color: rgba(13, 12, 12, 0.4);
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.footer:hover {
+    background-color: rgba(22, 22, 22, 0.9);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s, filter 0.3s;
+    filter: grayscale(100%);
+}
+
+.footer-icons img:hover {
+    transform: scale(1.2);
+    filter: grayscale(0) invert(1);
+}
